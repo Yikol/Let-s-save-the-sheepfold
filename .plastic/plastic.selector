@@ -1,0 +1,4 @@
+repository "拯救羊圈吧@acd07be7-1ffd-4d2c-b30b-3f2bb93a1be6@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"

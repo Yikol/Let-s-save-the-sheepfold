@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -49,4 +50,7 @@ TagManager:
     locked: 0
   - name: character
     uniqueID: 1610044451
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 2385635975
     locked: 0

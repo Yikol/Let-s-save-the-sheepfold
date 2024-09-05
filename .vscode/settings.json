@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "拯救羊圈吧.sln"
+    "dotnet.defaultSolution": "Let-s-save-the-sheepfold.sln"
 }

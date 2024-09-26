@@ -23,8 +23,24 @@ namespace Pathfinding {
 
 		void ChooseRandomTarget(){
 			if(targets != null&&targets.Length > 0){
-				target = targets[Random.Range(0,targets.Length)];
-			}
+				Transform selectedTarget = targets[Random.Range(0, targets.Length)];
+				Vector3 startPoint = selectedTarget.position - selectedTarget.localScale / 2; // 物体起点
+        		Vector3 endPoint = selectedTarget.position + selectedTarget.localScale / 2;   // 物体终点
+				// 在物体上随机选择一点
+				Vector3 randomPoint = new Vector3(
+					Random.Range(startPoint.x, endPoint.x),
+					selectedTarget.position.y, // 保持 y 坐标不变
+					0 // 在 2D 中 z 坐标通常为 0
+				);
+
+				// 创建新的空物体作为目标
+				if (target != null) {
+					Destroy(target.gameObject); // 如果已存在目标，销毁它
+				}
+				GameObject targetObject = new GameObject("RandomTarget");
+				target = targetObject.transform;
+				target.position = randomPoint; // 设置目标位置
+    }
 		}
 
 		void OnEnable () {
